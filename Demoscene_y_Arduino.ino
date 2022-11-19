@@ -1,6 +1,6 @@
 /*
 
-  La demoscene me ayudó en mis proyectos conArduino:
+  La demoscene me ayuda en mis proyectos con Arduino:
 
   Demo de lectura de pines analógicos del Arduino UNO R3 y su visualización por puerto serial y ANSI
   Permite ahorrar recursos sin necesidad de una pantalla
@@ -8,20 +8,8 @@
   Se puede aplicar tanto a Arduino como a Raspberry Pi Pico (desde la Arduino IDE)
   Bajos recursos (10%)
 
-
-  Diapositiva 1
-
-  Arduino (y otros microcontroladores) le dieron la espalda a la terminal serial como elemento cotidiano.
-  A nivel docente se habla solamente como herramienta de debug y para algunas comunicaciones (BT, comandos AT, etc)
-
-  -> Que me pasaba antes (problema)
-  Me resultaba incompleto el Monitor Serie del Arduino IDE o de VSCode con Platformio.
-
-  -> Por qué me funciona bien ANSI y Arduino
-  Principalmente, me resulta mucho más enriquecedor tener una terminal linda en donde ver todo los datos del proyecto.
-  Me abre un panorama nuevo sobre interactivdad, por ejemplo con sensores de distancia, de temperatura, pines y diferentes componentes
-
 */
+
 #define ARRIBA 12
 #define ABAJO 9
 #define IZQUIERDA 11
@@ -83,17 +71,7 @@ void Bienvenidos()
 void Diapositiva1()
 {
 
-  /* Arduino (y otros microcontroladores) le dieron la espalda a la terminal serial como elemento cotidiano.
-    A nivel docente se habla solamente como herramienta de debug y para algunas comunicaciones (BT, comandos AT, etc)
-
-    -> Que me pasaba antes (problema)
-    Me resultaba incompleto el Monitor Serie del Arduino IDE o de VSCode con Platformio.
-
-    -> Por qué me funciona bien ANSI y Arduino
-    Principalmente, me resulta mucho más enriquecedor tener una terminal linda en donde ver todo los datos del proyecto.
-    Me abre un panorama nuevo sobre interactivdad, por ejemplo con sensores de distancia, de temperatura, pines y diferentes componentes */
-
-  BorraMediaPantalla();
+BorraMediaPantalla();
 #define Titulo "1 - La Demoscene y Arduino"
 #define Linea1  "Arduino (y otros microcontroladores)"
 #define Linea2  "le dieron la espalda a la terminal"
@@ -205,19 +183,6 @@ void Diapositiva3()
   ansi.print("cable USB y terminal ANSI");
   concluido = true;
 
-  /*
-
-    Exceder las capacidades de los
-    displays más usados
-    (1602, 2004, oled, etc)
-
-    Mostrar más informacion y con
-    mas cantidad de detalles
-
-    Usar menos cantidad de pines
-
-    Abaratar los proyectos de desarrollo
-  */
 }
 
 void Diapositiva4()
@@ -628,56 +593,3 @@ void loop() {
 
 
 }
-
-/* digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN));
-  ansi.gotoXY(8, 15);
-  if (digitalRead(LED_BUILTIN) == 1)
-  {
-  ansi.foreground(3);
-  ansi.print((char)178);
-  ansi.normal();
-  } else {
-  ansi.normal();
-  ansi.print(" ");
-  }
-*/
-
-/* ansi.gotoXY(18, 10);
-  ansi.foreground(4);
-  ansi.print((char)178); ansi.print((char)178); ansi.print((char)178); ansi.print((char)178);
-  ansi.gotoXY(18, 10);
-  ansi.print(analogRead(A0));
-
-  ansi.gotoXY(19, 10);
-  ansi.foreground(4);
-  ansi.print((char)178); ansi.print((char)178); ansi.print((char)178); ansi.print((char)178);
-  ansi.gotoXY(19, 10);
-  ansi.print(analogRead(A1));
-
-  ansi.gotoXY(20, 10);
-  ansi.foreground(4);
-  ansi.print((char)178); ansi.print((char)178); ansi.print((char)178); ansi.print((char)178);
-  ansi.gotoXY(20, 10);
-  ansi.print(analogRead(A2));
-
-  ansi.gotoXY(21, 10);
-  ansi.foreground(4);
-  ansi.print((char)178); ansi.print((char)178); ansi.print((char)178); ansi.print((char)178);
-  ansi.gotoXY(21, 10);
-  ansi.print(analogRead(A3));
-
-  ansi.gotoXY(22, 10);
-  ansi.foreground(4);
-  ansi.print((char)178); ansi.print((char)178); ansi.print((char)178); ansi.print((char)178);
-  ansi.gotoXY(22, 10);
-  ansi.print(analogRead(A4));
-
-  ansi.gotoXY(23, 10);
-  ansi.foreground(4);
-  ansi.print((char)178); ansi.print((char)178); ansi.print((char)178); ansi.print((char)178);
-  ansi.gotoXY(23, 10);
-  ansi.print(analogRead(A5));
-
-  //Saco el cursor del medio de la pantalla
-  ansi.gotoXY(25, 80);
-*/
