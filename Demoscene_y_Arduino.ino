@@ -63,7 +63,6 @@ void Bienvenidos()
   ansi.gotoXY(6, 50);
   ansi.print("teno@disroot.org");
   ansi.gotoXY(8, 39);
-  ansi.print("");
   ansi.normal();
   concluido = true;
 }
@@ -532,7 +531,6 @@ void loop() {
             ansi.print("teno@disroot.org");
             ansi.gotoXY(16, 39);
             ansi.foreground(1);
-            ansi.print("");
           }
           ansi.normal();
         }
